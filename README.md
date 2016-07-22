@@ -1,3 +1,15 @@
+Server Ubuntu prepare
+apt-get update
+apt-get upgrade
+apt-get install git
+//apt-get install linux-headers
+apt-get install build-essential
+apt-get install gcc
+apt-get install libboost-all-dev
+apt-get install libmysqlclient-dev
+
+
+
 Utworzenie środowiska developerskiego dla nowego projektu
 Po wykonaniu wszystkich kroków z poniższej instrukcji:
 Będą przygotowane kanały komunikacji dla zespołu tworzącego grę: confluence, JIRA itp.
