@@ -1,0 +1,66 @@
+GNET(IGMI_CONNECT,"ti ui us i","c -> game_name, game_instance, host, port, group_id")
+GNET(IGMI_ACCEPT,"","s -> c, zgoda na polaczenie")
+GNET(IGMI_PING,"","c - s, ping w obie strony")
+GNET(IGMI_NOPING,"","notyfikacja braku pingu po stronie klineta")
+GNET(IGMI_DISCONNECT,"","c -> s, info o zakonczeniu pracy i zamierzonym odpieciu")
+GNET(IGMI_FIRST,"","pierwszy message parsowany normalnie")
+GNET(IGMI_REGISTER_SERVER,"","")
+GNET(IGMI_PLAYERS,"i * (<IGSI_PLAYER_INFO>)","info o graczach")
+GNET(IGMI_REGISTER_INSTANCE,"<IGSI_PLAYER_INSTANCE>","user_instance")
+GNET(IGMI_UNREGISTER_INSTANCE,"<IGSI_PLAYER_INSTANCE>","user_instance")
+GNET(IGMI_GROUP_STATUS_UPDATE,"UI ui us i iii ui us ui t[33]","timestamp, host, port, group_id, group_type, status, locations_loaded, host_console, port_console, host_external, ports_external")
+GNET(IGMI_GROUP_STATUS_UPDATE_RESPONSE,"UI","timestamp")
+GNET(IGMI_LOCATION_RELEASE,"t[65]","location_ID")
+GNET(IGMI_LOCATION_RELEASE_RESPONSE,"t[65] b","location_ID, result")
+GNET(IGMI_CENZOR_MESSAGE,"t[512] t[65] t[250000]","message_text, payload_1 , payload_2")
+GNET(IGMI_BUDDIES_REGISTER,"i i*(i)","user_id, buddies list")
+GNET(IGMI_PLAYERS_BUDDIES,"i * (<IGSI_BUDDIES>)","buddies list")
+GNET(IGMI_GLOBAL_MESSAGE,"t[255] t[1000100] b","command, parameters, system message")
+GNET(IGMI_SYSTEM_GLOBAL_MESSAGE_RESULT,"t[1000100]","result")
+GNET(IGMI_LAST,"","ostatni message parsowany normalnie")
+
+GNET(IGMIT_FIRST,"","pierwszy message ticket")
+
+// common
+GNET(IGMITIC_REGISTER,"<IGSI_TARGET> <IGSI_PLAYER_INFO>","info o graczu")
+GNET(IGMITIC_UNREGISTER,"<IGSI_TARGET> <IGSI_PLAYER_INFO>","info o graczu")
+GNET(IGMIT_PROCESSED,"","message ze statsy dostaly message i go przetworzyly, usuwa z ticket z kolejki")
+
+// group
+GNET(IGMITIC_LOGIC_MESSAGE,"<IGSI_TARGET> t[65] t[255] t[1000100] i","target_location_ID, command, parameters, ttl_seconds")
+GNET(IGMIT_LOGIC_MESSAGE_BAD_ADDRESS,"<IGSI_TARGET> t[65] t[255] t[1000100] i ui us i","target_location_ID, command, parameters, ttl_seconds, host, port, group_id")
+
+// access
+GNET(IGMITIC_ACCESS,"<IGSI_TARGET> <IGSI_ACCESS> <IGSI_CLIENT_HOST> <IGSI_SERVER_HOST>","")
+GNET(IGMIT_ACCESS_ACCEPT,"<IGSI_TARGET>","")
+GNET(IGMIT_ACCESS_REJECT,"<IGSI_TARGET> t","opis")
+GNET(IGMIT_ACCESS_CLOSE,"<IGSI_TARGET> t","opis")
+GNET(IGMIT_PLAYER,"<IGSI_TARGET> <IGSI_PLAYER_INFO>","info o graczu")
+GNET(IGMIT_REGISTRATION_END,"","message wysylany po przetworzeniu messaga IGMITIC_REGISTER przez serwis accessu")
+
+// nodebalancer
+GNET(IGMITIC_LOCATION_ADDRESS_GET,"<IGSI_TARGET> t[65] i","location_ID, connection_type")
+GNET(IGMIT_LOCATION_ADDRESS_RESPONSE,"<IGSI_TARGET> t[65] i b ui t[33] i","location_ID, connection_type, result, host, ports, group_id")
+
+// cache
+GNET(IGMIT_RESOURCES,"<IGSI_TARGET> <IGSI_RESOURCES>","")
+GNET(IGMIT_RESOURCES_VERSION,"<IGSI_TARGET>","")
+GNET(IGMIT_RESOURCES_EXTENDED,"<IGSI_TARGET> <IGSI_RESOURCES_EXTENDED>","")
+
+// globalinfo
+GNET(IGMIT_ONLINE_AND_OFFLINE_FRIENDS,"<IGSI_TARGET> i*(<IGSI_PLAYER_INSTANCE>) i*(i UI)","user_instance, user_id, last_connection")
+GNET(IGMIT_ONLINE_FRIEND,"<IGSI_TARGET> <IGSI_PLAYER_INSTANCE>","user_instance")
+GNET(IGMIT_ONLINE_FRIEND_REMOVE,"<IGSI_TARGET> <IGSI_PLAYER_INSTANCE>","user_instance")
+
+// leaderboard
+GNET(IGMITIC_LEADERBOARD_GET,"<IGSI_TARGET> t[32]UIi i*(i)","key, subkey, user_id, friends_id")
+GNET(IGMIT_LEADERBOARD_DATA,"<IGSI_TARGET> t[32]UIi i*(ii)","key, subkey, user_id, user_id, score")
+GNET(IGMITIC_LEADERBOARD_GET_STANDINGS,"<IGSI_TARGET> t[32]UIi ii i*(i)","key, subkey, user_id, standings_index, max_results, friends_id")
+GNET(IGMIT_LEADERBOARD_DATA_STANDINGS,"<IGSI_TARGET> t[32]UIi i i*(ii)","key, subkey, user_id, standings_index, user_id, score")
+GNET(IGMITIC_LEADERBOARD_SET,"<IGSI_TARGET> t[32]UIi i*(i)","key, subkey, user_id, score")
+GNET(IGMITIC_LEADERBOARD_GET_BATCH_INFO,"<IGSI_TARGET> t[32]UIi i i*(i)","key, subkey, user_id, standings_index, users_id")
+GNET(IGMIT_LEADERBOARD_DATA_BATCH_INFO,"<IGSI_TARGET> t[32]UIi i i*(ii)","key, subkey, user_id, standings_index, user_id, score")
+GNET(IGMITIC_LEADERBOARD_GET_USER_POSITION,"<IGSI_TARGET> t[32]UIi i*(i)","key, subkey, user_id, friends_id")
+GNET(IGMIT_LEADERBOARD_DATA_USER_POSITION,"<IGSI_TARGET> t[32]UIi i*(ii)","key, subkey, user_id, user_id, position")
+
+GNET(IGMIT_LAST,"<IGSI_TARGET>","ostatni message ticket")

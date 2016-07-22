@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0bb57261-1adc-4b98-8be8-ccfbac8bfb58}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{e2be62e2-8409-43f7-9a62-055008cccb37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Socket">
+      <UniqueIdentifier>{626d1d27-c0f5-4ed3-be38-de861a1595ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Server">
+      <UniqueIdentifier>{258af70b-3555-4183-86a9-0d3db8243d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Main">
+      <UniqueIdentifier>{99f9c5df-570b-40c8-8470-3b39b0b22773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Main\Misc">
+      <UniqueIdentifier>{e78f8b78-3336-47f1-b568-178adc7515c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AccessManager">
+      <UniqueIdentifier>{b909d46a-f8b6-4098-b287-83cd7d2257c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CacheManager">
+      <UniqueIdentifier>{1dbb9b1e-20bf-4620-8c86-c40911114f5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SlowSQLManager">
+      <UniqueIdentifier>{5db75252-0473-4125-a5d1-abd74de61ace}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FlashPolicyManager">
+      <UniqueIdentifier>{3cd74f3e-0b6c-4fea-b285-8ccb3c3020f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{711f55d0-4171-4538-adce-4c7ad0374657}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Table Files">
+      <UniqueIdentifier>{3d6aa0a2-9c1b-46a9-9427-2a3c6f02ab8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers Local">
+      <UniqueIdentifier>{6c1c5ae5-7b02-4840-a808-b85a98d532cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GlobalInfoManager">
+      <UniqueIdentifier>{6893f5c9-b5b4-4c14-be61-c9cd7d81dce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NodeBalancerManager">
+      <UniqueIdentifier>{8c0ea07b-b8fb-421c-b2ad-84734ba27ba4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LeaderBoardManager">
+      <UniqueIdentifier>{c48dc85f-6364-4ad5-8541-dc7112d2d952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CenzorManager">
+      <UniqueIdentifier>{742c33b2-f0bb-4e64-aeff-99ae8131668a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GlobalMessageManager">
+      <UniqueIdentifier>{442aaff5-c433-44f7-8d47-0b5044c46ef4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gserver_local.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gconsole.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gnet.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsql_manager.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gtruerng.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\md5.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_console.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_internal_client.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gticket_internal_client.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gserver.cpp">
+      <Filter>Source Files\Common\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gserver_base.cpp">
+      <Filter>Source Files\Common\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gserver_base_console.cpp">
+      <Filter>Source Files\Common\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gmain_console.cpp">
+      <Filter>Source Files\Common\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gmain_server.cpp">
+      <Filter>Source Files\Common\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\main_misc.cpp">
+      <Filter>Source Files\Common\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gfirewall.cpp">
+      <Filter>Source Files\Common\Main\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gmemory.cpp">
+      <Filter>Source Files\Common\Main\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gpoll_manager.cpp">
+      <Filter>Source Files\Common\Main\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gstatistics.cpp">
+      <Filter>Source Files\Common\Main\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsystem.cpp">
+      <Filter>Source Files\Common\Main\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\raport_file.cpp">
+      <Filter>Source Files\Common\Main\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\utils.cpp">
+      <Filter>Source Files\Common\Main\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="gaccessmanager.cpp">
+      <Filter>Source Files\AccessManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gaccessmanager_basic.cpp">
+      <Filter>Source Files\AccessManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gaccessmanager_console.cpp">
+      <Filter>Source Files\AccessManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gaccessmanager_registration.cpp">
+      <Filter>Source Files\AccessManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gaccessmanager_sessions.cpp">
+      <Filter>Source Files\AccessManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gcachemanager.cpp">
+      <Filter>Source Files\CacheManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gcachemanager_console.cpp">
+      <Filter>Source Files\CacheManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gslowsqlmanager.cpp">
+      <Filter>Source Files\SlowSQLManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gslowsqlmanager_console.cpp">
+      <Filter>Source Files\SlowSQLManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gflashpolicymanager.cpp">
+      <Filter>Source Files\FlashPolicyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gflashpolicymanager_console.cpp">
+      <Filter>Source Files\FlashPolicyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gglobalinfomanager.cpp">
+      <Filter>Source Files\GlobalInfoManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gglobalinfomanager_console.cpp">
+      <Filter>Source Files\GlobalInfoManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gglobalinfomanager_friends.cpp">
+      <Filter>Source Files\GlobalInfoManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gnodebalancermanager.cpp">
+      <Filter>Source Files\NodeBalancerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gnodebalancermanager_console.cpp">
+      <Filter>Source Files\NodeBalancerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gleaderboardmanager.cpp">
+      <Filter>Source Files\LeaderBoardManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gleaderboardmanager_console.cpp">
+      <Filter>Source Files\LeaderBoardManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_internal_server.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="gnodebalancermanager_getgroups.cpp">
+      <Filter>Source Files\NodeBalancerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gnodebalancermanager_assigngroup.cpp">
+      <Filter>Source Files\NodeBalancerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gcenzormanager.cpp">
+      <Filter>Source Files\CenzorManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gcenzormanager_console.cpp">
+      <Filter>Source Files\CenzorManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gglobalmessagemanager.cpp">
+      <Filter>Source Files\GlobalMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gglobalmessagemanager_console.cpp">
+      <Filter>Source Files\GlobalMessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gcenzor_adv.cpp">
+      <Filter>Source Files\CenzorManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\utils_conversion.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gaccessmanager.h">
+      <Filter>Source Files\AccessManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gcachemanager.h">
+      <Filter>Source Files\CacheManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gslowsqlmanager.h">
+      <Filter>Source Files\SlowSQLManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gflashpolicymanager.h">
+      <Filter>Source Files\FlashPolicyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Projects_2005\lib\google\sparsehash\densehashtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gserver_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gservices.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gsqlmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gtickets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\headers_all.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\include_libraries.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\raport_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\server_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\utils_conversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gserver_local.h">
+      <Filter>Headers Local</Filter>
+    </ClInclude>
+    <ClInclude Include="headers_game.h">
+      <Filter>Headers Local</Filter>
+    </ClInclude>
+    <ClInclude Include="gglobalinfomanager.h">
+      <Filter>Source Files\GlobalInfoManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gnodebalancermanager.h">
+      <Filter>Source Files\NodeBalancerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gleaderboardmanager.h">
+      <Filter>Source Files\LeaderBoardManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gcenzormanager.h">
+      <Filter>Source Files\CenzorManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gglobalmessagemanager.h">
+      <Filter>Source Files\GlobalMessageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="gcenzor_adv.h">
+      <Filter>Source Files\CenzorManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\server_include\tbl\gconsole.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gconsole_stats.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gmsg_internal.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gmsg_internal_sub.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gservices.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gstatistics.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

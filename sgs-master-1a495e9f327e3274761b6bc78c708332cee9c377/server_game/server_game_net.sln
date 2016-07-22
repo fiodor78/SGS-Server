@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82CF37B1-871E-49FF-97B1-9A13F211967D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server_game", "server_game_net.vcxproj", "{4DE12823-FDA9-40DE-959D-8CAE397A0E50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug game|Win32 = Debug game|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DE12823-FDA9-40DE-959D-8CAE397A0E50}.Debug game|Win32.ActiveCfg = Debug game|Win32
+		{4DE12823-FDA9-40DE-959D-8CAE397A0E50}.Debug game|Win32.Build.0 = Debug game|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

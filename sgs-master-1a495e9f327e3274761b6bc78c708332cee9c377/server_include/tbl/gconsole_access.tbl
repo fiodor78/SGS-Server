@@ -1,0 +1,1 @@
+GCONSOLE(CONSOLE_MEMORY,ConsoleAccessProcessMemory,"Display information about memory allocations\r\nsyntax: memory")

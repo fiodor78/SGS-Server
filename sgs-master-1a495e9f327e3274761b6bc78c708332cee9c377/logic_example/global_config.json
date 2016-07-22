@@ -1,0 +1,5 @@
+{
+    "available_difficulties": [1, 2, 4, 5],
+    "special_holiday": "Christmas",
+    "points_per_xp": 100
+}

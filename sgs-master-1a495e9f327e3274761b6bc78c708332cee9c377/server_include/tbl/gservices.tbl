@@ -1,0 +1,33 @@
+GSERVICE(ESTAcceptBaseConsole,ESFAccept,    ESTClientBaseConsole,ESFClient,     "base",ESFConsole)
+GSERVICE(ESTAcceptBase,ESFAccept,           ESTClientBase,ESFClient,            "base",ESFBasic)
+GSERVICE(ESTAcceptBaseGame,ESFAccept,       ESTClientBaseGame,ESFClient,        "base",ESFBasic)
+
+GSERVICE(ESTAcceptServicesConsole,ESFAccept,ESTClientServicesConsole,ESFClient, "services",ESFConsole)
+GSERVICE(ESTAcceptServices,ESFAccept,       ESTClientServices,ESFClient,        "services",ESFBasic)
+
+GSERVICE(ESTAcceptAccessConsole,ESFAccept,  ESTClientAccessConsole,ESFClient,   "access",ESFConsole)
+GSERVICE(ESTAcceptAccess,ESFAccept,         ESTClientAccess,ESFClient,          "access",ESFBasic)
+
+GSERVICE(ESTAcceptCacheConsole,ESFAccept,   ESTClientCacheConsole,ESFClient,    "cache",ESFConsole)
+GSERVICE(ESTAcceptCache,ESFAccept,          ESTClientCache,ESFClient,           "cache",ESFBasic)
+
+GSERVICE(ESTAcceptSlowSQLConsole,ESFAccept, ESTClientSlowSQLConsole,ESFClient,  "slowsql",ESFConsole)
+GSERVICE(ESTAcceptSlowSQL,ESFAccept,        ESTClientSlowSQL,ESFClient,         "slowsql",ESFBasic)
+
+GSERVICE(ESTAcceptFlashPolicyConsole,ESFAccept, ESTClientFlashPolicyConsole,ESFClient,  "flashpolicy",ESFConsole)
+GSERVICE(ESTAcceptFlashPolicy,ESFAccept,        ESTClientFlashPolicy,ESFClient,         "flashpolicy",ESFBasic)
+
+GSERVICE(ESTAcceptGlobalInfoConsole,ESFAccept, ESTClientGlobalInfoConsole,ESFClient,  "globalinfo",ESFConsole)
+GSERVICE(ESTAcceptGlobalInfo,ESFAccept,        ESTClientGlobalInfo,ESFClient,         "globalinfo",ESFBasic)
+
+GSERVICE(ESTAcceptNodeBalancerConsole,ESFAccept, ESTClientNodeBalancerConsole,ESFClient,  "nodebalancer",ESFConsole)
+GSERVICE(ESTAcceptNodeBalancer,ESFAccept,        ESTClientNodeBalancer,ESFClient,         "nodebalancer",ESFBasic)
+
+GSERVICE(ESTAcceptLeaderBoardConsole,ESFAccept, ESTClientLeaderBoardConsole,ESFClient,  "leaderboard",ESFConsole)
+GSERVICE(ESTAcceptLeaderBoard,ESFAccept,        ESTClientLeaderBoard,ESFClient,         "leaderboard",ESFBasic)
+
+GSERVICE(ESTAcceptCenzorConsole,ESFAccept,  ESTClientCenzorConsole,ESFClient,  "cenzor",ESFConsole)
+GSERVICE(ESTAcceptCenzor,ESFAccept,         ESTClientCenzor,ESFClient,         "cenzor",ESFBasic)
+
+GSERVICE(ESTAcceptGlobalMessageConsole,ESFAccept,  ESTClientGlobalMessageConsole,ESFClient,  "globalmessage",ESFConsole)
+GSERVICE(ESTAcceptGlobalMessage,ESFAccept,         ESTClientGlobalMessage,ESFClient,         "globalmessage",ESFBasic)

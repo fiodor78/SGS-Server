@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9aa3792a-902c-4e04-a283-96bf91bf9472}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Table Files">
+      <UniqueIdentifier>{32993ade-605e-420c-a552-1bf9ccb53896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Local">
+      <UniqueIdentifier>{52eb9646-c6e6-4274-80d1-a4cae25f8c61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{246198d4-84ac-406c-a602-2c7e94db166c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{24a5daa7-ab4d-45bd-90d6-4a242fcfb108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Socket">
+      <UniqueIdentifier>{40e62e06-b312-4836-b378-97961ef8e60f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\GServer">
+      <UniqueIdentifier>{4f4eda41-dae4-40d6-bd5d-a54c6fad35d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Misc">
+      <UniqueIdentifier>{d2550442-5038-4538-bf7d-a69703f6bea8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Group">
+      <UniqueIdentifier>{caa0f57c-0f30-40b4-b704-3e1b7bc85775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GroupManager">
+      <UniqueIdentifier>{638b2d53-e9dc-42ec-9d63-6d9ff6220feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{169079a2-2745-4346-8669-3bef4805429a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ServerGame">
+      <UniqueIdentifier>{ec07edf5-f81a-4c10-974a-c411dc777223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scripting">
+      <UniqueIdentifier>{f210b490-0790-43f1-9b59-9fb3fa5dca4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scripting\lua">
+      <UniqueIdentifier>{a4c2455d-997f-42aa-bf0f-8dac9fd77734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scripting\lua_cjson">
+      <UniqueIdentifier>{e04de180-bc0e-4fcd-b07d-83de4927e0a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\server_include\defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\defines_server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\externs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gaccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gcomputer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gconsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gfirewall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ggame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmain_console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmain_server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmemory_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmsg_game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmsg_game_sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmsg_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gmsg_internal_sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gnet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gnet_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gnet_crypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gnet_helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gpoll_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gserver_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gservices.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gsignals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gsocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gsocket_stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gsqlmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gstatistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gsystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gticket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gtickets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gtickets_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\headers_all.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\include_ssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\raport_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\server_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\templates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="define_game.h">
+      <Filter>Header Local</Filter>
+    </ClInclude>
+    <ClInclude Include="glogic.h">
+      <Filter>Header Local</Filter>
+    </ClInclude>
+    <ClInclude Include="gserver_local.h">
+      <Filter>Header Local</Filter>
+    </ClInclude>
+    <ClInclude Include="headers_game.h">
+      <Filter>Header Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gnet_r.hpp">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gnet_t.hpp">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\gnet_w.hpp">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\utils_md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glogic_engine.h">
+      <Filter>Header Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_include\utils_conversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server_api\sgs_api.h">
+      <Filter>Header Local</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\server_include\tbl\gconnection.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gconsole.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gmsg_internal.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gmsg_internal_sub.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gservices.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="..\server_include\tbl\gstatistics.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="gmsg_game.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+    <None Include="gmsg_game_sub.tbl">
+      <Filter>Table Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gconsole.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gmain_console.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gmain_server.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gnet.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gpoll_manager.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_access.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_game.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsql_manager.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\main_misc.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_console.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_internal_client.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gticket_internal_client.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gserver.cpp">
+      <Filter>Source Files\Common\GServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gserver_base.cpp">
+      <Filter>Source Files\Common\GServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gserver_base_console.cpp">
+      <Filter>Source Files\Common\GServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gfirewall.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gmemory.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gstatistics.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsystem.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\md5.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\raport_file.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\utils.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="ggroup.cpp">
+      <Filter>Source Files\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="ggroup_basic.cpp">
+      <Filter>Source Files\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="ggroup_message.cpp">
+      <Filter>Source Files\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="ggroup_time.cpp">
+      <Filter>Source Files\Group</Filter>
+    </ClCompile>
+    <ClCompile Include="ggroup_manager.cpp">
+      <Filter>Source Files\GroupManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ggroup_manager_registration.cpp">
+      <Filter>Source Files\GroupManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ggroup_manager_time.cpp">
+      <Filter>Source Files\GroupManager</Filter>
+    </ClCompile>
+    <ClCompile Include="gplayer.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="gplayer_basic.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="gplayer_message.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="gserver_local.cpp">
+      <Filter>Source Files\ServerGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gtruerng.cpp">
+      <Filter>Source Files\Common\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lapi.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lauxlib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lbaselib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lcode.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\ldblib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\ldebug.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\ldo.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\ldump.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lfunc.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lgc.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\linit.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\liolib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\llex.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lmathlib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lmem.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\loadlib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lobject.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lopcodes.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\loslib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lparser.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lstate.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lstring.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lstrlib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\ltable.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\ltablib.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\ltm.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lundump.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lvm.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lzio.c">
+      <Filter>Source Files\Scripting\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="glogic_engine.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="glogic_engine_lua.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="glogic_engine_cpp.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket_internal_server.cpp">
+      <Filter>Source Files\Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\fpconv.c">
+      <Filter>Source Files\Scripting\lua_cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\lua_cjson.c">
+      <Filter>Source Files\Scripting\lua_cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\strbuf.c">
+      <Filter>Source Files\Scripting\lua_cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="glogic_engine_gamestatedb.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="ggamestatedb_worker_thread.cpp">
+      <Filter>Source Files\ServerGame</Filter>
+    </ClCompile>
+    <ClCompile Include="glogic_engine_process_message.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="glogic_engine_upcalls.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="hmac_sha256_base64.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="ggamestatedb_mysql.cpp">
+      <Filter>Source Files\ServerGame</Filter>
+    </ClCompile>
+    <ClCompile Include="ggamestatedb_dynamodb.cpp">
+      <Filter>Source Files\ServerGame</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\getsize.c">
+      <Filter>Source Files\Scripting\lua_cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="ghttprequest_worker_thread.cpp">
+      <Filter>Source Files\ServerGame</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

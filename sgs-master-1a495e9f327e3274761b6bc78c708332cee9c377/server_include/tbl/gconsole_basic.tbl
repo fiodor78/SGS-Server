@@ -1,0 +1,5 @@
+GCONSOLE(CONSOLE_HELP,ConsoleProcessHelp,"Display help information\r\nsyntax: help")
+GCONSOLE(CONSOLE_INFO,ConsoleProcessInfo,"Show info about server\r\nsyntax: info")
+GCONSOLE(CONSOLE_EXIT,ConsoleProcessExit,"Close connection to server\r\nsyntax: exit")
+GCONSOLE(CONSOLE_QUIT,ConsoleProcessQuit,"Close connection to server\r\nsyntax: quit")
+GCONSOLE(CONSOLE_RAPORT,ConsoleProcessRaport,"Raport file options\r\nsyntax: raport [verbose=on|off]")

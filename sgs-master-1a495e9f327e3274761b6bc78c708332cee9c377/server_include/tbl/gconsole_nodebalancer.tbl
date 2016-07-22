@@ -1,0 +1,3 @@
+GCONSOLE(CONSOLE_NODEBALANCER,ConsoleNodeBalancer,"NodeBalancer manager\r\nsyntax: nodebalancer (INFO)\r\n")
+GCONSOLE(CONSOLE_GETGAMESTATEADDRESS,ConsoleNodeBalancerGetGamestateAddress,"Get gamestate address\r\nsyntax: getgamestateaddress x (GROUP|CONSOLE|CLIENT)\r\nwhere:\r\n              x is gamestate_id, GROUP|CONSOLE|CLIENT is connection type\r\n")
+GCONSOLE(CONSOLE_GETLOCATIONADDRESS,ConsoleNodeBalancerGetLocationAddress,"Get location address\r\nsyntax: getlocationaddress x (GROUP|CONSOLE|CLIENT)\r\nwhere:\r\n              x is location_id, GROUP|CONSOLE|CLIENT is connection type\r\n")

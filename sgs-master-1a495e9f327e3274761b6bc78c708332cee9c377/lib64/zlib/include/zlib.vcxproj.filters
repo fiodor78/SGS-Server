@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{effef226-6309-4222-bf51-aa80edda19fb}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{831d37da-ebd2-46f4-8039-45dd8a18a3d8}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ADLER32.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="COMPRESS.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRC32.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DEFLATE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EXAMPLE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GZIO.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INFBLOCK.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INFCODES.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INFFAST.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INFLATE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INFTREES.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INFUTIL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TREES.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UNCOMPR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZUTIL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DEFLATE.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\COMMON\gbitmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INFBLOCK.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INFCODES.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INFFAST.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INFTREES.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INFUTIL.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZCONF.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZLIB.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZUTIL.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

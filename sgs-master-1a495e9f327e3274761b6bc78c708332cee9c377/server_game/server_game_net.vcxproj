@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug game|Win32">
+      <Configuration>Debug game</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug game|x64">
+      <Configuration>Debug game</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>server_game</ProjectName>
+    <ProjectGuid>{4DE12823-FDA9-40DE-959D-8CAE397A0E50}</ProjectGuid>
+    <RootNamespace>server_game</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">..\debug_game\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">..\debug_game\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">false</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">false</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">
+    <Midl>
+      <TypeLibraryName>.\debug_game/server_game.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200 /D _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(BOOST_PATH);..\server_api;..\server_game\;..\server_include\;..\lib\sql\include;..\lib;..\lib\openssl\;..\lib\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;LIVEFEED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>headers_all.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>..\debug_game/server_game.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\debug_game/</AssemblerListingLocation>
+      <ObjectFileName>..\debug_game/</ObjectFileName>
+      <ProgramDataBaseFileName>..\debug_game/</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>WSOCK32.LIB;winmm.lib;libeay32.lib;libmysql.lib;zlib_d.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\debug_game/server_game.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\debug_game/server_game.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(BOOST_LIB_PATH);..\lib\curl\lib;..\lib\openssl\lib;..\lib\sql\lib;..\lib\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy Data To Linux</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">
+    <Midl>
+      <TypeLibraryName>.\debug_game/server_game.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200 /D _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(BOOST_PATH);..\server_api;..\server_game\;..\server_include\;..\lib64\mysql\include;..\lib64\google;..\lib64\curl;..\lib64\openssl;..\lib64\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;LIVEFEED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>headers_all.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>..\debug_game/server_game.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\debug_game/</AssemblerListingLocation>
+      <ObjectFileName>..\debug_game/</ObjectFileName>
+      <ProgramDataBaseFileName>..\debug_game/</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>WSOCK32.LIB;winmm.lib;libeay32.lib;libmysql.lib;zlib_d.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\debug_game/server_game.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\debug_game/server_game.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(BOOST_LIB_PATH);..\lib64\curl\lib;..\lib64\openssl\lib;..\lib64\zlib\lib;..\lib64\mysql\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy Data To Linux</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\server_api\sgs_api.h" />
+    <ClInclude Include="..\server_include\defines.h" />
+    <ClInclude Include="..\server_include\defines_server.h" />
+    <ClInclude Include="..\server_include\enums.h" />
+    <ClInclude Include="..\server_include\externs.h" />
+    <ClInclude Include="..\server_include\gaccess.h" />
+    <ClInclude Include="..\server_include\gcomputer.h" />
+    <ClInclude Include="..\server_include\gconsole.h" />
+    <ClInclude Include="..\server_include\gfirewall.h" />
+    <ClInclude Include="..\server_include\utils_conversion.h" />
+    <ClInclude Include="..\server_include\utils_md5.h" />
+    <ClInclude Include="ggame.h" />
+    <ClInclude Include="..\server_include\gmain_console.h" />
+    <ClInclude Include="..\server_include\gmain_server.h" />
+    <ClInclude Include="..\server_include\gmemory.h" />
+    <ClInclude Include="..\server_include\gmemory_manager.h" />
+    <ClInclude Include="..\server_include\gmsg_game.h" />
+    <ClInclude Include="..\server_include\gmsg_game_sub.h" />
+    <ClInclude Include="..\server_include\gmsg_internal.h" />
+    <ClInclude Include="..\server_include\gmsg_internal_sub.h" />
+    <ClInclude Include="..\server_include\gnet.h" />
+    <ClInclude Include="..\server_include\gnet_base.h" />
+    <ClInclude Include="..\server_include\gnet_crypt.h" />
+    <ClInclude Include="..\server_include\gnet_helpers.h" />
+    <ClInclude Include="..\server_include\gpoll_manager.h" />
+    <ClInclude Include="..\server_include\gserver.h" />
+    <ClInclude Include="..\server_include\gserver_base.h" />
+    <ClInclude Include="..\server_include\gservices.h" />
+    <ClInclude Include="..\server_include\gsignals.h" />
+    <ClInclude Include="..\server_include\gsocket.h" />
+    <ClInclude Include="..\server_include\gsocket_stack.h" />
+    <ClInclude Include="..\server_include\gsqlmanager.h" />
+    <ClInclude Include="..\server_include\gstatistics.h" />
+    <ClInclude Include="..\server_include\gsystem.h" />
+    <ClInclude Include="..\server_include\gticket.h" />
+    <ClInclude Include="..\server_include\gtickets.h" />
+    <ClInclude Include="..\server_include\gtickets_client.h" />
+    <ClInclude Include="..\server_include\headers_all.h" />
+    <ClInclude Include="..\server_include\include_ssl.h" />
+    <ClInclude Include="..\server_include\includes.h" />
+    <ClInclude Include="..\server_include\md5.h" />
+    <ClInclude Include="..\server_include\raport_file.h" />
+    <ClInclude Include="..\server_include\server_common.h" />
+    <ClInclude Include="..\server_include\templates.h" />
+    <ClInclude Include="..\server_include\types.h" />
+    <ClInclude Include="..\server_include\utils.h" />
+    <ClInclude Include="define_game.h" />
+    <ClInclude Include="glogic.h" />
+    <ClInclude Include="glogic_engine.h" />
+    <ClInclude Include="gserver_local.h" />
+    <ClInclude Include="headers_game.h" />
+    <ClInclude Include="..\server_include\gnet_r.hpp" />
+    <ClInclude Include="..\server_include\gnet_t.hpp" />
+    <ClInclude Include="..\server_include\gnet_w.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\server_include\tbl\gconnection.tbl" />
+    <None Include="..\server_include\tbl\gconsole.tbl" />
+    <None Include="..\server_include\tbl\gmsg_internal.tbl" />
+    <None Include="..\server_include\tbl\gmsg_internal_sub.tbl" />
+    <None Include="..\server_include\tbl\gservices.tbl" />
+    <None Include="..\server_include\tbl\gstatistics.tbl" />
+    <None Include="gmsg_game.tbl" />
+    <None Include="gmsg_game_sub.tbl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\server_common\gsocket_internal_server.cpp" />
+    <ClCompile Include="..\server_common\gtruerng.cpp" />
+    <ClCompile Include="ggamestatedb_dynamodb.cpp" />
+    <ClCompile Include="ggamestatedb_mysql.cpp" />
+    <ClCompile Include="ggamestatedb_worker_thread.cpp" />
+    <ClCompile Include="ghttprequest_worker_thread.cpp" />
+    <ClCompile Include="glogic_engine.cpp" />
+    <ClCompile Include="glogic_engine_cpp.cpp" />
+    <ClCompile Include="glogic_engine_gamestatedb.cpp" />
+    <ClCompile Include="glogic_engine_lua.cpp" />
+    <ClCompile Include="glogic_engine_process_message.cpp" />
+    <ClCompile Include="glogic_engine_upcalls.cpp" />
+    <ClCompile Include="hmac_sha256_base64.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lapi.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lauxlib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lbaselib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lcode.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\ldblib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\ldebug.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\ldo.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\ldump.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lfunc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lgc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\linit.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\liolib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\llex.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lmathlib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lmem.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\loadlib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lobject.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lopcodes.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\loslib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lparser.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lstate.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lstring.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lstrlib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\ltable.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\ltablib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\ltm.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lundump.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lvm.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua\lzio.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\fpconv.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\getsize.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\lua_cjson.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lua_cjson\strbuf.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gconsole.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">false</PreprocessSuppressLineNumbers>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gmain_console.cpp" />
+    <ClCompile Include="..\server_common\gmain_server.cpp" />
+    <ClCompile Include="..\server_common\gnet.cpp" />
+    <ClCompile Include="..\server_common\gpoll_manager.cpp" />
+    <ClCompile Include="..\server_common\gsocket_access.cpp" />
+    <ClCompile Include="..\server_common\gsocket_game.cpp" />
+    <ClCompile Include="..\server_common\gsql_manager.cpp" />
+    <ClCompile Include="..\server_common\main_misc.cpp" />
+    <ClCompile Include="..\server_common\gsocket.cpp" />
+    <ClCompile Include="..\server_common\gsocket_console.cpp" />
+    <ClCompile Include="..\server_common\gsocket_internal_client.cpp" />
+    <ClCompile Include="..\server_common\gticket_internal_client.cpp" />
+    <ClCompile Include="..\server_common\gserver.cpp" />
+    <ClCompile Include="..\server_common\gserver_base.cpp" />
+    <ClCompile Include="..\server_common\gserver_base_console.cpp" />
+    <ClCompile Include="..\server_common\gfirewall.cpp" />
+    <ClCompile Include="..\server_common\gmemory.cpp" />
+    <ClCompile Include="..\server_common\gstatistics.cpp" />
+    <ClCompile Include="..\server_common\gsystem.cpp" />
+    <ClCompile Include="..\server_common\md5.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug game|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\server_common\raport_file.cpp" />
+    <ClCompile Include="..\server_common\utils.cpp" />
+    <ClCompile Include="ggroup.cpp" />
+    <ClCompile Include="ggroup_basic.cpp" />
+    <ClCompile Include="ggroup_message.cpp" />
+    <ClCompile Include="ggroup_time.cpp" />
+    <ClCompile Include="ggroup_manager.cpp" />
+    <ClCompile Include="ggroup_manager_registration.cpp" />
+    <ClCompile Include="ggroup_manager_time.cpp" />
+    <ClCompile Include="gplayer.cpp" />
+    <ClCompile Include="gplayer_basic.cpp" />
+    <ClCompile Include="gplayer_message.cpp" />
+    <ClCompile Include="gserver_local.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# check for crashed servers
+
+GetPID(){
+    ServerName=$1
+    Out=`ps auxww | grep -v "grep" | grep "./$ServerName" |grep [0-9]`
+    PID=`echo $Out | awk -F' '  '{ printf"%d\n",$2}'`
+    return $PID
+}
+
+CurService=1;
+cd /opt/servers/bin
+for CurDir in *; do
+    if test -d $CurDir; then
+    cd $CurDir
+    for CurFile in Server$2*; do
+	if test -x $CurFile -a -f $CurFile; then
+	if test -f pid; then
+	FindService=1;
+	GetPID $CurFile
+	OutPid=$PID
+	    if test $OutPid -eq 0; then
+    	        echo -n "Watcher: $CurService -restarting Service $CurFile -> "
+	        ./$CurFile &
+	        echo "[ OK ]"
+		#mail to specific address
+		echo "Restarted service $CurFile" | /bin/mail -s "Service restart!" cerebro@ganymede.eu
+		CurService=`expr $CurService + 1`
+	    fi  
+	fi
+	fi
+    done;
+    cd ..
+    fi
+done;
+TestCountServices=`expr $CurService - 1`
+

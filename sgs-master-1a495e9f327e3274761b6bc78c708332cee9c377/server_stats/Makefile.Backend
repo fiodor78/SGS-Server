@@ -1,0 +1,37 @@
+GAME=Backend
+SERVER=ServerBackend
+TARGET=../../bin/$(GAME)/$(SERVER)
+DEFS=
+SERVICES=yes
+
+SRCDIR=srcbackend
+
+OBJS = $(SRCDIR)/main.o \
+	$(SRCDIR)/gaccessmanager.o \
+	$(SRCDIR)/gaccessmanager_basic.o \
+	$(SRCDIR)/gaccessmanager_console.o \
+	$(SRCDIR)/gaccessmanager_registration.o \
+	$(SRCDIR)/gaccessmanager_sessions.o \
+	$(SRCDIR)/gcachemanager.o \
+	$(SRCDIR)/gcachemanager_console.o \
+	$(SRCDIR)/gserver_local.o \
+	$(SRCDIR)/gslowsqlmanager.o \
+	$(SRCDIR)/gslowsqlmanager_console.o\
+	$(SRCDIR)/gflashpolicymanager.o \
+	$(SRCDIR)/gflashpolicymanager_console.o \
+	$(SRCDIR)/gglobalinfomanager.o \
+	$(SRCDIR)/gglobalinfomanager_console.o \
+	$(SRCDIR)/gglobalinfomanager_friends.o \
+	$(SRCDIR)/gnodebalancermanager.o \
+	$(SRCDIR)/gnodebalancermanager_assigngroup.o \
+	$(SRCDIR)/gnodebalancermanager_getgroups.o \
+	$(SRCDIR)/gnodebalancermanager_console.o \
+	$(SRCDIR)/gleaderboardmanager.o \
+	$(SRCDIR)/gleaderboardmanager_console.o \
+	$(SRCDIR)/gcenzor_adv.o \
+	$(SRCDIR)/gcenzormanager.o \
+	$(SRCDIR)/gcenzormanager_console.o \
+	$(SRCDIR)/gglobalmessagemanager.o \
+	$(SRCDIR)/gglobalmessagemanager_console.o
+
+include ../makefile.include

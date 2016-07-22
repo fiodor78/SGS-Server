@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug stats_2005|Win32">
+      <Configuration>Debug stats_2005</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug stats_2005|x64">
+      <Configuration>Debug stats_2005</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>server_stats_2005</ProjectName>
+    <ProjectGuid>{332A2375-5DA2-481F-9F0B-882569C9257E}</ProjectGuid>
+    <RootNamespace>server_stats_2005</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">..\debug_stats\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">..\debug_stats\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">false</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">false</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">server_stats</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">server_stats</TargetName>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">C:\Program Files\boost\boost_1_51;E:\src\test\boost_1_55_0;E:\boost\boost_1_51_0;E:\boost\boost_1_53_0;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">C:\Program Files\boost\boost_1_51\lib;E:\src\test\boost_1_55_0\stage\lib;E:\boost\boost_1_53_0\lib32;E:\boost\boost_1_51_0\lib32;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">
+    <Midl>
+      <TypeLibraryName>.\debug_stats/server_stats.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200 /D _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(BOOST_PATH);..\server_stats\;..\server_include\;..\lib\sql\include;..\lib\;..\lib\openssl\;..\lib\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>headers_all.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>..\debug_stats/server_stats.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\debug_stats/</AssemblerListingLocation>
+      <ObjectFileName>..\debug_stats/</ObjectFileName>
+      <ProgramDataBaseFileName>..\debug_stats/</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>WSOCK32.LIB;winmm.lib;libeay32.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../debug_stats/server_stats.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\debug_stats/server_stats.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(BOOST_PATH);..\lib\openssl\lib;..\lib\sql\lib;..\lib\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy Data To Linux</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">
+    <Midl>
+      <TypeLibraryName>.\debug_stats/server_stats.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200 /D _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(BOOST_PATH);..\server_stats\;..\server_include\;..\lib64\mysql\include\;..\lib64\google\;..\lib64\curl\;..\lib64\openssl</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>headers_all.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>..\debug_stats/server_stats.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\debug_stats/</AssemblerListingLocation>
+      <ObjectFileName>..\debug_stats/</ObjectFileName>
+      <ProgramDataBaseFileName>..\debug_stats/</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>WSOCK32.LIB;winmm.lib;libeay32.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../debug_stats/server_stats.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\debug_stats/server_stats.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(BOOST_LIB_PATH);..\lib64\curl\lib;..\lib64\openssl\lib;..\lib64\mysql\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy Data To Linux</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\server_common\gsocket_internal_server.cpp" />
+    <ClCompile Include="..\server_common\utils_conversion.cpp" />
+    <ClCompile Include="gcenzormanager.cpp" />
+    <ClCompile Include="gcenzormanager_console.cpp" />
+    <ClCompile Include="gcenzor_adv.cpp" />
+    <ClCompile Include="gglobalinfomanager.cpp" />
+    <ClCompile Include="gglobalinfomanager_console.cpp" />
+    <ClCompile Include="gglobalinfomanager_friends.cpp" />
+    <ClCompile Include="gglobalmessagemanager.cpp" />
+    <ClCompile Include="gglobalmessagemanager_console.cpp" />
+    <ClCompile Include="gleaderboardmanager.cpp" />
+    <ClCompile Include="gleaderboardmanager_console.cpp" />
+    <ClCompile Include="gnodebalancermanager.cpp" />
+    <ClCompile Include="gnodebalancermanager_assigngroup.cpp" />
+    <ClCompile Include="gnodebalancermanager_console.cpp" />
+    <ClCompile Include="gnodebalancermanager_getgroups.cpp" />
+    <ClCompile Include="gserver_local.cpp" />
+    <ClCompile Include="main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">..\debug_stats/server_stats.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">..\debug_stats/server_stats.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gconsole.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">false</PreprocessSuppressLineNumbers>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gnet.cpp" />
+    <ClCompile Include="..\server_common\gsql_manager.cpp" />
+    <ClCompile Include="..\server_common\gtruerng.cpp" />
+    <ClCompile Include="..\server_common\md5.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gsocket.cpp" />
+    <ClCompile Include="..\server_common\gsocket_console.cpp" />
+    <ClCompile Include="..\server_common\gsocket_internal_client.cpp" />
+    <ClCompile Include="..\server_common\gticket_internal_client.cpp" />
+    <ClCompile Include="..\server_common\gserver.cpp" />
+    <ClCompile Include="..\server_common\gserver_base.cpp" />
+    <ClCompile Include="..\server_common\gserver_base_console.cpp" />
+    <ClCompile Include="..\server_common\gmain_console.cpp" />
+    <ClCompile Include="..\server_common\gmain_server.cpp" />
+    <ClCompile Include="..\server_common\main_misc.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|Win32'">.\debug_stats/</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug stats_2005|x64'">.\debug_stats/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\server_common\gfirewall.cpp" />
+    <ClCompile Include="..\server_common\gmemory.cpp" />
+    <ClCompile Include="..\server_common\gpoll_manager.cpp" />
+    <ClCompile Include="..\server_common\gstatistics.cpp" />
+    <ClCompile Include="..\server_common\gsystem.cpp" />
+    <ClCompile Include="..\server_common\raport_file.cpp" />
+    <ClCompile Include="..\server_common\utils.cpp" />
+    <ClCompile Include="gaccessmanager.cpp" />
+    <ClCompile Include="gaccessmanager_basic.cpp" />
+    <ClCompile Include="gaccessmanager_console.cpp" />
+    <ClCompile Include="gaccessmanager_registration.cpp" />
+    <ClCompile Include="gaccessmanager_sessions.cpp" />
+    <ClCompile Include="gcachemanager.cpp" />
+    <ClCompile Include="gcachemanager_console.cpp" />
+    <ClCompile Include="gslowsqlmanager.cpp" />
+    <ClCompile Include="gslowsqlmanager_console.cpp" />
+    <ClCompile Include="gflashpolicymanager.cpp" />
+    <ClCompile Include="gflashpolicymanager_console.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gaccessmanager.h" />
+    <ClInclude Include="gcachemanager.h" />
+    <ClInclude Include="gcenzormanager.h" />
+    <ClInclude Include="gcenzor_adv.h" />
+    <ClInclude Include="gglobalinfomanager.h" />
+    <ClInclude Include="gglobalmessagemanager.h" />
+    <ClInclude Include="gleaderboardmanager.h" />
+    <ClInclude Include="gnodebalancermanager.h" />
+    <ClInclude Include="gslowsqlmanager.h" />
+    <ClInclude Include="gflashpolicymanager.h" />
+    <ClInclude Include="..\server_include\defines.h" />
+    <ClInclude Include="G:\Projects_2005\lib\google\sparsehash\densehashtable.h" />
+    <ClInclude Include="..\server_include\enums.h" />
+    <ClInclude Include="..\server_include\gserver_base.h" />
+    <ClInclude Include="..\server_include\gservices.h" />
+    <ClInclude Include="..\server_include\gsqlmanager.h" />
+    <ClInclude Include="..\server_include\gtickets.h" />
+    <ClInclude Include="..\server_include\headers_all.h" />
+    <ClInclude Include="..\server_include\include_libraries.h" />
+    <ClInclude Include="..\server_include\raport_file.h" />
+    <ClInclude Include="..\server_include\server_common.h" />
+    <ClInclude Include="..\server_include\utils.h" />
+    <ClInclude Include="..\server_include\utils_conversion.h" />
+    <ClInclude Include="gserver_local.h" />
+    <ClInclude Include="headers_game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\server_include\tbl\gconsole.tbl" />
+    <None Include="..\server_include\tbl\gconsole_stats.tbl" />
+    <None Include="..\server_include\tbl\gmsg_internal.tbl" />
+    <None Include="..\server_include\tbl\gmsg_internal_sub.tbl" />
+    <None Include="..\server_include\tbl\gservices.tbl" />
+    <None Include="..\server_include\tbl\gstatistics.tbl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

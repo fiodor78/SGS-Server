@@ -1,0 +1,1 @@
+GCONSOLE(CONSOLE_GLOBALMESSAGE,ConsoleGlobalMessage,"GlobalMessage manager\r\nsyntax: globalmessage (INFO|ALL)\r\nwhere:\r\n ALL:     sends global message to all groups e.g. globalmessage all command=\"do_something\" params={}")

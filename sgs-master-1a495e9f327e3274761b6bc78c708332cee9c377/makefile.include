@@ -1,0 +1,105 @@
+# #!/bin/sh
+INCDIR =-I/usr/include \
+	-I./ \
+	-I/usr/lib/ \
+	-I../server_include \
+	-I../server_api \
+	-I../lib \
+	-I/usr/include/mysql \
+	-I/usr/include/boost \
+	-I/usr/lib/boost/
+	
+#-L/usr/lib/mysql\
+
+IS_AWS=$(shell grep -E '(ec2|compute-1).internal' /etc/resolv.conf | wc -l)
+
+MAKEFLAGS=-j1
+
+LIBDIR =-L/usr/lib/mysql -L/usr/lib64/mysql -L/usr/local/lib -L/usr/lib64
+
+OPTIMIZE_DEFS=
+ifeq ($(IS_AWS), 0)
+	OPTIMIZE_DEFS= -O0
+else
+	OPTIMIZE_DEFS= -Og
+endif
+
+DEFS+=-DLINUX -ggdb $(OPTIMIZE_DEFS)
+
+CC= g++ -c $(INCDIR) $(DEFS) -Wno-deprecated -Wno-write-strings
+CC2= gcc -c $(INCDIR) $(DEFS) -Wno-write-strings
+
+#-m32 -mtune=i386 -march=i386 -cpu=i386
+# -fpermissive
+
+LIBS= $(LIBDIR) -lmysqlclient \
+	-lpthread \
+	-lz \
+	-lssl \
+	-lcrypto \
+	-lboost_program_options \
+	-lboost_signals \
+	-lboost_thread \
+	-lboost_date_time \
+	-lboost_filesystem \
+	-lboost_regex \
+	-lboost_system \
+	-lcoredumper \
+	-ldl \
+	-lrt \
+	-lcurl
+#-ltcmalloc_minimal
+#-lefence
+
+OBJCOMMON+= $(SRCDIR)/gconsole.o \
+	$(SRCDIR)/gmain_console.o \
+	$(SRCDIR)/gmain_server.o \
+	$(SRCDIR)/gnet.o \
+	$(SRCDIR)/main_misc.o \
+	$(SRCDIR)/gfirewall.o \
+	$(SRCDIR)/gmemory.o \
+	$(SRCDIR)/gpoll_manager.o \
+	$(SRCDIR)/gstatistics.o \
+	$(SRCDIR)/gsystem.o \
+	$(SRCDIR)/raport_file.o \
+	$(SRCDIR)/utils.o \
+	$(SRCDIR)/gsocket.o \
+	$(SRCDIR)/gsocket_console.o \
+	$(SRCDIR)/gsocket_internal_client.o \
+	$(SRCDIR)/gticket_internal_client.o \
+	$(SRCDIR)/gsocket_internal_server.o \
+	$(SRCDIR)/gserver_base.o \
+	$(SRCDIR)/gserver_base_console.o \
+	$(SRCDIR)/gserver.o \
+	$(SRCDIR)/gsql_manager.o \
+	$(SRCDIR)/md5.o \
+	$(SRCDIR)/gtruerng.o \
+	$(SRCDIR)/utils_conversion.o
+	
+ifndef SERVICES	
+OBJCOMMON+= $(SRCDIR)/gsocket_game.o \
+	$(SRCDIR)/gsocket_access.o 
+endif
+
+CURRENT_TIMESTAMP = $(shell date +%Y%m%d%H%M%S)
+
+all: makedir $(SERVER)
+
+makedir:
+	mkdir -p $(SRCDIR)
+	mkdir -p $(dir $(TARGET))
+
+$(SERVER): $(OBJCOMMON) $(OBJS) $(OBJLIB)
+	g++ -ggdb $(OPTIMIZE_DEFS) $(OBJCOMMON) $(OBJS) $(OBJLIB) -o $(TARGET) $(LIBS)
+
+$(OBJS): $(SRCDIR)/%.o: %.cpp
+	$(CC) -o $@ $<
+
+$(OBJLUA): $(SRCDIR)/%.o: ./lua/%.c
+	$(CC2) -o $@ $<
+
+$(OBJLUA_CJSON): $(SRCDIR)/%.o: ./lua_cjson/%.c
+	$(CC2) -o $@ $<
+
+$(OBJCOMMON): $(SRCDIR)/%.o: ../server_common/%.cpp
+	$(CC) -o $@ $<

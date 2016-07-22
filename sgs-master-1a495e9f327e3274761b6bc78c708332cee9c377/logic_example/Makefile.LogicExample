@@ -1,0 +1,40 @@
+SERVER=libLogicExample.so
+TARGET=../bin_logic/logic_example/$(SERVER)
+DEFS= -ggdb
+
+BUILDDIR=../build_logic
+
+SOURCES = $(wildcard *.cpp)
+OBJS = $(SOURCES:%.cpp=$(BUILDDIR)/%.o)
+
+INCDIR =-I/usr/include \
+    -I/opt/servers/src/server_api/ \
+    -I./ \
+    -I/usr/lib/ \
+    -I/usr/include/boost \
+    -I/usr/lib/boost/ \
+    -Icommon
+
+CORE_COUNT = $(shell grep -c ^processor /proc/cpuinfo 2>/dev/null)
+MAKEFLAGS=-j$(CORE_COUNT)
+
+LIBDIR =-L/usr/local/lib
+
+DEFS+=-DLINUX -DTEST
+
+CC= g++ -c $(INCDIR) $(DEFS) -fPIC -Wno-deprecated -Wno-write-strings -fvisibility=hidden
+
+all: makedir $(SERVER)
+
+clean:
+	rm -rf $(BUILDDIR)/*.o
+
+makedir:
+	mkdir -p $(BUILDDIR)
+	mkdir -p $(dir $(TARGET))
+
+$(SERVER): $(OBJS)
+	g++ -shared -Wl,-soname,$(SERVER) -o $(TARGET) $(OBJS)
+
+$(OBJS): $(BUILDDIR)/%.o: %.cpp
+	$(CC) -o $@ $<

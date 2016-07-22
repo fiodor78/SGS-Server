@@ -1,0 +1,72 @@
+GAME=Game
+SERVER=ServerGame
+TARGET=../../bin/$(GAME)/$(SERVER)
+#TARGET=$(SERVER)
+DEFS= -ggdb -DLUA_USE_MKSTEMP
+
+SRCDIR=srcsocial
+
+OBJS = 	$(SRCDIR)/main.o \
+	$(SRCDIR)/ggroup.o \
+	$(SRCDIR)/ggroup_basic.o \
+	$(SRCDIR)/ggroup_manager.o \
+	$(SRCDIR)/ggroup_manager_registration.o \
+	$(SRCDIR)/ggroup_manager_time.o \
+	$(SRCDIR)/ggroup_message.o \
+	$(SRCDIR)/ggroup_time.o \
+	$(SRCDIR)/gplayer.o \
+	$(SRCDIR)/gplayer_basic.o \
+	$(SRCDIR)/gplayer_message.o \
+	$(SRCDIR)/gserver_local.o \
+	$(SRCDIR)/hmac_sha256_base64.o \
+	$(SRCDIR)/ggamestatedb_worker_thread.o \
+	$(SRCDIR)/ggamestatedb_mysql.o \
+	$(SRCDIR)/ggamestatedb_dynamodb.o \
+	$(SRCDIR)/ghttprequest_worker_thread.o \
+	$(SRCDIR)/glogic_engine.o \
+	$(SRCDIR)/glogic_engine_gamestatedb.o \
+	$(SRCDIR)/glogic_engine_process_message.o \
+	$(SRCDIR)/glogic_engine_upcalls.o \
+	$(SRCDIR)/glogic_engine_lua.o \
+	$(SRCDIR)/glogic_engine_cpp.o
+
+OBJLUA =  $(SRCDIR)/lapi.o \
+	$(SRCDIR)/lcode.o \
+	$(SRCDIR)/ldebug.o \
+	$(SRCDIR)/ldo.o \
+	$(SRCDIR)/ldump.o \
+	$(SRCDIR)/lfunc.o \
+	$(SRCDIR)/lgc.o \
+	$(SRCDIR)/llex.o \
+	$(SRCDIR)/lmem.o \
+	$(SRCDIR)/lobject.o \
+	$(SRCDIR)/lopcodes.o \
+	$(SRCDIR)/lparser.o \
+	$(SRCDIR)/lstate.o \
+	$(SRCDIR)/lstring.o \
+	$(SRCDIR)/ltable.o \
+	$(SRCDIR)/ltm.o \
+	$(SRCDIR)/lundump.o \
+	$(SRCDIR)/lvm.o \
+	$(SRCDIR)/lzio.o \
+	$(SRCDIR)/lauxlib.o \
+	$(SRCDIR)/lbaselib.o \
+	$(SRCDIR)/ldblib.o \
+	$(SRCDIR)/liolib.o \
+	$(SRCDIR)/lmathlib.o \
+	$(SRCDIR)/loslib.o \
+	$(SRCDIR)/ltablib.o \
+	$(SRCDIR)/lstrlib.o \
+	$(SRCDIR)/loadlib.o \
+	$(SRCDIR)/linit.o
+	
+OBJLUA_CJSON = $(SRCDIR)/fpconv.o \
+	$(SRCDIR)/strbuf.o \
+	$(SRCDIR)/lua_cjson.o \
+	$(SRCDIR)/getsize.o
+
+OBJCOMMON= 
+OBJLIB= $(OBJLUA) $(OBJLUA_CJSON)
+
+include ../makefile.include
+

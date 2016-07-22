@@ -1,0 +1,9 @@
+
+files=`find . -name '*.o'`
+
+for file in $files
+do
+rm -f $file
+done
+
+

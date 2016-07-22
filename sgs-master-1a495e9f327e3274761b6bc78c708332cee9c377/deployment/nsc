@@ -1,0 +1,354 @@
+#!/usr/bin/perl
+# next gen server control
+# usage:
+# nsc start|stop|status|restart|down|term|coredump [server list]
+
+# global configuration
+my $is_GD_production = `hostname | grep gamedesire.com\$ | wc -l`;
+chomp($is_GD_production);
+my $is_AWS_production = `grep -E '(ec2|compute-1).internal' /etc/resolv.conf | wc -l`;
+
+chomp($is_AWS_production);
+
+if ($is_AWS_production)
+{
+    chdir("/opt/servers/bin");
+    `mkdir -p /media/ephemeral0/logs`;
+    `mkdir -p /media/ephemeral0/logic_logs`;
+}
+
+#global variables
+my @all_servers;
+my @all_servers_dirs;
+my @running_servers_names;
+my @running_servers_pids;
+#additional commandline stuff
+#set to 1 if --full, -f  is specified
+my $full_status=0;
+#--running ; -r
+my $running_only=0;
+#--down -d
+my $down_only=0;
+my @cmdline_servers;
+
+#helper functions
+#fill all_servers, running_servers_names,
+#running_servers_pids
+sub build_server_lists
+{
+ opendir(CUR_DIR,".");
+ my @files=readdir(CUR_DIR);
+ closedir(DIR);
+ foreach $file (@files) {
+  if((-d $file) and ($file ne ".") and ($file ne "..")) {
+   #it's a directory, we have to go deeper
+   opendir(SERVER_DIR,$file) || next;
+   my @servers=readdir(SERVER_DIR);
+   closedir(SERVER_DIR);
+   foreach $server (@servers) {
+    if((-x "./".$file."/".$server) &&
+      !(-d "./".$file."/".$server) &&
+       ($server=~m/Server/)) {
+     #commandline limit
+     if($#cmdline_servers+1) {
+      for($i=0;$i<$#cmdline_servers+1;$i++) {
+       if(($server=~m/$cmdline_servers[$i]/) ||
+         (($cmdline_servers[$i] eq "all") && ($server ne "ServerStats"))) {
+          push @all_servers,$server;
+          push @all_servers_dirs,$file;
+       }
+      }
+     }
+     else {
+#      push @all_servers,$server;
+#      push @all_servers_dirs,$file;
+     }
+    }
+   }
+  }
+ }
+ my $lsout=`ps auxw | grep Server`;
+ my @lsout_lines=split('\n',$lsout);
+ #column 2 contains PID, column 11 contains
+ #command used to execute server
+ #first line is header and has to be discarded
+ foreach $server (@all_servers) {
+  foreach $line (@lsout_lines) {
+   if($line=~m/$server$/) {
+    my @line_list=split ' ',$line;
+    push @running_servers_names,$server;
+    push @running_servers_pids,$line_list[1];
+   }
+  }
+ }
+}
+
+sub srv_start
+{
+ for($i=0;$i<($#all_servers+1);$i++) {
+  if(-f "./".$all_servers_dirs[$i]."/pid") {
+   #see if server is already started
+   $pidfile="./".$all_servers_dirs[$i]."/pid";
+   $pid=`cat $pidfile`;
+   $found=0;
+   for($j=0;$j<($#running_servers_pids+1);$j++) {
+    if($running_servers_pids[$j]==$pid) {
+     $found=1;
+     last;
+    }
+   }
+   if($found) {
+    print "Server $all_servers[$i] already running (PID $pid)\n";
+   }
+   else {
+    print "Starting server $all_servers[$i] AFTER CRASH\n";
+    `rm -f $pidfile`;
+    chdir $all_servers_dirs[$i];
+    $cmdname = "ulimit -S -c unlimited; ./$all_servers[$i] > /dev/null 2>&1 &";
+    if ($is_GD_production)
+    {
+        $cmdname = "ulimit -n 20000; chgrp root ./$all_servers[$i]; ".$cmdname;
+    }
+    system($cmdname);
+    chdir "..";
+   }
+  }
+  else {
+   print "Starting server $all_servers[$i]\n";
+   chdir $all_servers_dirs[$i];
+   $cmdname = "ulimit -S -c unlimited; ./$all_servers[$i] > /dev/null 2>&1 &";
+   if ($is_GD_production)
+   {
+       $cmdname = "ulimit -n 20000; chgrp root ./$all_servers[$i]; ".$cmdname;
+   }
+   system($cmdname);
+   chdir "..";
+  }
+ }
+}
+
+sub srv_stop
+{
+ #polite way of shutting down servers
+ #use pid file from server directory and
+ #send -2 signal to server
+ for($i=0;$i<($#all_servers+1);$i++) {
+  if(-f $all_servers_dirs[$i]."/pid") {
+   $pidfile=$all_servers_dirs[$i]."/pid";
+   $pid=`cat $pidfile`;
+   `kill -2 $pid`;
+   print "Sent stop signal to server $all_servers[$i] (PID $pid)\n";
+  }
+ }
+}
+
+sub srv_term
+{
+ #less polite way but still giver server a chance for proper cleanup
+ #use pid file from server directory and
+ for($i=0;$i<($#all_servers+1);$i++) {
+  if(-f $all_servers_dirs[$i]."/pid") {
+   $pidfile=$all_servers_dirs[$i]."/pid";
+   $pid=`cat $pidfile`;
+   `kill -15 $pid`;
+   print "Sent term signal to server $all_servers[$i] (PID $pid)\n";
+  }
+ }
+}
+
+sub srv_down
+{
+ #super polite way of shutting down servers
+ #use pid file from server directory and
+ #send -10 (SIGUSR1) to server
+ #server will shut down if no one is playing
+ for($i=0;$i<($#all_servers+1);$i++) {
+  if(-f $all_servers_dirs[$i]."/pid") {
+   $pidfile=$all_servers_dirs[$i]."/pid";
+   $pid=`cat $pidfile`;
+   `kill -10 $pid`;
+   print "Sent SIGUSR1 signal to server $all_servers[$i] (PID $pid)\n";
+  }
+ }
+}
+
+sub srv_end
+{
+ #brutal stop, -9 to all PID's, delete pid file
+ for($i=0;$i<($#all_servers+1);$i++) {
+  my @pid_list;
+  for($j=0;$j<($#running_servers_names+1);$j++) {
+   if($running_servers_names[$j]=~m/$all_servers[$i]$/) {
+    push @pid_list,$running_servers_pids[$j];
+   }
+  }
+  $count=$#pid_list+1;
+  if($count) {
+   print "Brute force stopping server $all_servers[$i] (PID's: ".join(",",@pid_list).")\n";
+   foreach $pid (@pid_list) {
+    `kill -9 $pid`;
+    if(-f "./$all_servers_dirs[$i]/pid") {
+     print "Removing pid file - ./$all_servers_dirs[$i]/pid\n";
+     `rm -f ./$all_servers_dirs[$i]/pid`;
+    }
+   }
+  }
+ }
+}
+
+sub srv_status
+{
+ for($i=0;$i<($#all_servers+1);$i++) {
+  my @pid_list;
+  for($j=0;$j<($#running_servers_names+1);$j++) {
+   if($running_servers_names[$j]=~m/$all_servers[$i]$/) {
+    push @pid_list,$running_servers_pids[$j];
+   }
+  }
+  $count=$#pid_list+1;
+  if($count) {
+   if($full_status) {
+    if(!$down_only) {
+     print "Server $all_servers[$i] is running at following pids ($count total):\n";
+     print join(",",@pid_list);
+     print "\n";
+    }
+   }
+   else {
+    if(!$down_only) {
+     print "Server $all_servers[$i] is running\n";
+    }
+   }
+  }
+  else {
+   if(-f "./".$all_server_dirs[$i]."/pid") {
+    #there is a pid file but there is no server running
+    #that means crash
+    print "Server $all_servers[$i] is CRASHED!\n";
+   }
+   else {
+    if(!$running_only) {
+     print "Server $all_servers[$i] is NOT RUNNING\n";
+    }
+   }
+  }
+ }
+}
+
+sub srv_restart
+{
+ print "Stopping all servers ...\n";
+ srv_stop();
+ print "Sleep waiting for servers to stop (10 seconds)\n";
+ sleep 10;
+ build_server_lists();
+ srv_start();
+}
+
+sub srv_coredump
+{
+ #write core from running process
+ #use pid file from server directory and
+ #execute gcore command
+ for($i=0;$i<($#all_servers+1);$i++) {
+  if(-f $all_servers_dirs[$i]."/pid") {
+   $pidfile=$all_servers_dirs[$i]."/pid";
+   $pid=`cat $pidfile`;
+   $core_filename = $all_servers_dirs[$i]."/core.".`date +%s | tr -d '\n'`;
+   `gcore -o $core_filename $pid 2>/dev/null`;
+   if (-f $core_filename.".".$pid)
+   {
+     print "Core dumped from server $all_servers[$i] (PID $pid) to file $core_filename.$pid\n";
+   }
+   else
+   {
+     $username = `whoami | tr -d '\n'`;
+     if ($username eq "root")
+     {
+       print "Core from server $all_servers[$i] (PID $pid) NOT DUMPED.\n";
+     }
+     else
+     {
+       print "Core from server $all_servers[$i] (PID $pid) NOT DUMPED (try running command as root).\n";
+     }
+   }
+  }
+ }
+}
+
+sub print_usage
+{
+ print "nsc - New sc\nUsage:\n";
+ print "nsc start|stop|status|restart|down|term|coredump [server list|\"all\"]\n";
+}
+
+#check if we are called properly
+$mode=shift @ARGV;
+if(!$mode) {
+ print_usage();
+ exit(0);
+}
+#build commandline server list & additional options list
+$in_srv_list=0;
+while($arg=shift @ARGV) {
+ if($in_srv_list) {
+  push @cmdline_servers,$arg;
+ }
+ else {
+  if(($arg eq "--full") or ($arg eq "-f")) {
+   $full_status=1;
+  }
+  elsif(($arg eq "--running") or ($arg eq "-r")) {
+   if($down_only) {
+    print "You can't specify -r together with -d!\n";
+    exit(0);
+   }
+   $running_only=1;
+  }
+  elsif(($arg eq "--down") or ($arg eq "-d")) {
+   if($running_only) {
+    print "You can't specify -r together with -d!\n";
+    exit(0);
+   }
+   $down_only=1;
+  }
+  else {
+   $in_srv_list=1;
+   push @cmdline_servers,$arg;
+  }
+ }
+}
+if((($mode eq "start") or (($mode eq "down"))) and not $in_srv_list) {
+ push @cmdline_servers,"all";
+}
+#build list of all servers (but limit to command line ones)
+build_server_lists();
+if($mode eq "start") {
+ srv_start();
+}
+elsif($mode eq "down") {
+ srv_down();
+}
+elsif($mode eq "stop") {
+ srv_stop();
+}
+elsif($mode eq "restart") {
+ srv_restart();
+}
+elsif($mode eq "status") {
+ srv_status();
+}
+elsif($mode eq "end") {
+ srv_end();
+}
+elsif($mode eq "term") {
+ srv_term();
+}
+elsif($mode eq "coredump") {
+ srv_coredump();
+}
+else {
+ print_usage();
+ exit(0);
+}
+

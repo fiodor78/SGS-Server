@@ -1,0 +1,90 @@
+﻿  ADLER32.C
+  COMPRESS.C
+  CRC32.C
+  DEFLATE.C
+  EXAMPLE.C
+EXAMPLE.C(60): warning C4267: 'initializing': conversion from 'size_t' to 'uLong', possible loss of data
+EXAMPLE.C(65): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+EXAMPLE.C(87): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+EXAMPLE.C(105): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+EXAMPLE.C(129): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+EXAMPLE.C(168): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+EXAMPLE.C(260): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+EXAMPLE.C(299): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+EXAMPLE.C(336): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+EXAMPLE.C(414): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+  GZIO.C
+GZIO.C(94): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+GZIO.C(129): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+GZIO.C(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+GZIO.C(182): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data
+GZIO.C(318): warning C4267: '-=': conversion from 'size_t' to 'uInt', possible loss of data
+GZIO.C(325): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data
+GZIO.C(519): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+GZIO.C(520): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+GZIO.C(521): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+  INFBLOCK.C
+INFBLOCK.C(136): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(161): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(180): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(184): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(190): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(199): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(200): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(215): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(223): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(232): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(241): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(255): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(268): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(281): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(293): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(322): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(331): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(340): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(367): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(371): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(374): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFBLOCK.C(377): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+  INFCODES.C
+INFCODES.C(108): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(123): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(158): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(161): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(170): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(190): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(193): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(210): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(219): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(226): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(230): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(233): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFCODES.C(236): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+  INFFAST.C
+INFFAST.C(128): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFFAST.C(151): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFFAST.C(158): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+INFFAST.C(166): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+  INFLATE.C
+INFLATE.C(333): warning C4244: '+=': conversion from '__int64' to 'uLong', possible loss of data
+  INFTREES.C
+  INFUTIL.C
+  TREES.C
+  UNCOMPR.C
+  ZUTIL.C
+  Generating Code...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1357,5): warning MSB8012: TargetPath(C:\Repositories\Server\sgs\lib\zlib\include\x64\Debug\zlib.lib) does not match the Library's OutputFile property value (C:\Repositories\Server\sgs\lib\zlib\zlib_d.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1359,5): warning MSB8012: TargetName(zlib) does not match the Library's OutputFile property value (zlib_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  zlib.vcxproj -> C:\Repositories\Server\sgs\lib\zlib\include\x64\Debug\zlib.lib

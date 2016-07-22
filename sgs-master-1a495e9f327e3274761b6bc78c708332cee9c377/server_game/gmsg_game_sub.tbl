@@ -1,0 +1,6 @@
+GSUBNET(IGS_ACCESS,"i it[65] t[33] i","ID, target_gamestate_ID, target_location_ID, SID, group id")
+GSUBNET(IGS_CLIENT_HOST,"ui","client id")
+GSUBNET(IGS_SERVER_HOST,"ui us","addr, port")
+GSUBNET(IGS_PLAYER_INFO_FULL,"i i it[65] t[33] i i i ui","RID, ID, target_gamestate_ID, target_location_ID, SID, unused, game_instance, access, ip")
+GSUBNET(IGS_RESOURCES,"i*(i UI i*(i))","")
+GSUBNET(IGS_RESOURCES_VERSION,"i*(i UI)","")

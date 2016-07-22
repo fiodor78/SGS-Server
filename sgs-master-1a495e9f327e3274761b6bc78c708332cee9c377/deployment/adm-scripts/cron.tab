@@ -1,0 +1,10 @@
+HOME=/home/servers/adm-scripts/
+
+#skrypty serwerow gier
+* * * * * /home/servers/adm-scripts/games/sc_watch_2005 >/dev/null
+* * * * * /home/servers/adm-scripts/games/big_log_watch.pl >/dev/null
+* * * * * /home/servers/adm-scripts/games/core_watch.pl >/dev/null
+*/5 * * * * /home/servers/adm-scripts/games/statistics.py >/dev/null
+30 1 * * * /usr/bin/find /media/ephemeral0/logs -mtime +14 -exec /bin/rm {} \;
+30 1 * * * /usr/bin/find /media/ephemeral0/logic_logs -mtime +14 -exec /bin/rm {} \;
+

@@ -1,0 +1,1 @@
+GCONSOLE(CONSOLE_SLOWSQL,ConsoleSlowSQL,"SlowSQL manager\r\nsyntax: slowsql (INFO)\r\n")
