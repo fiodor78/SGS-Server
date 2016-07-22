@@ -5,7 +5,7 @@ apt-get install git
 //apt-get install linux-headers
 apt-get install build-essential
 apt-get install gcc
-apt-get install openssl
+apt-get install libssl-dev
 apt-get install libboost-all-dev
 apt-get install libmysqlclient-dev
 
